@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Registro de mascotas.props" />
+</Project>
