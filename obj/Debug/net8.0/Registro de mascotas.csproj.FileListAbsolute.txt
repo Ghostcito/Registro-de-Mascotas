@@ -147,3 +147,4 @@ D:\Administrador\Programacion 1\Registro de mascotas\obj\Debug\net8.0\refint\Reg
 D:\Administrador\Programacion 1\Registro de mascotas\obj\Debug\net8.0\Registro de mascotas.pdb
 D:\Administrador\Programacion 1\Registro de mascotas\obj\Debug\net8.0\Registro de mascotas.genruntimeconfig.cache
 D:\Administrador\Programacion 1\Registro de mascotas\obj\Debug\net8.0\ref\Registro de mascotas.dll
+D:\Administrador\Programacion 1\Registro de mascotas\obj\Debug\net8.0\Registro de mascotas.sourcelink.json

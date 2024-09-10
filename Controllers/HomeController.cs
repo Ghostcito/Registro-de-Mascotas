@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Registro_de_mascotas.Data;
 using Registro_de_mascotas.Models;
 
 namespace Registro_de_mascotas.Controllers;
@@ -7,15 +8,18 @@ namespace Registro_de_mascotas.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger,ApplicationDbContext context)
     {
         _logger = logger;
+        _context= context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var listMascotas=from o in _context.DataMascota select o;
+        return View(listMascotas.ToList());
     }
 
     public IActionResult Privacy()
