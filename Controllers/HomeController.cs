@@ -34,7 +34,7 @@ public class HomeController : Controller
         _context.DataMascota.Remove(mascota);
         _context.SaveChanges();
         }
-        return View(Index);
+        return RedirectToAction(nameof(Index));
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
