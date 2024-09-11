@@ -28,7 +28,6 @@ public class HomeController : Controller
     }
 
 
-    [HttpPost]
     public IActionResult Delete(long id)
     {
         var mascota = _context.DataMascota.Find(id);
