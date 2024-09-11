@@ -27,6 +27,16 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Delete(long id)
+    {
+        var mascota = _context.DataMascota.Find(id);
+        if (mascota != null){
+        _context.DataMascota.Remove(mascota);
+        _context.SaveChanges();
+        }
+        return View(Index);
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

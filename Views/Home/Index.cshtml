@@ -15,6 +15,7 @@
             <td>Raza</td>
             <td>Color</td>
             <td>Fecha de Nacimiento</td>
+            <td>Accion</td>
         </thead>
         <tbody>
         @foreach(var item in Model){
@@ -23,7 +24,13 @@
                 <td>@Html.DisplayFor(modelItem => item.Raza)</td>
                 <td>@Html.DisplayFor(modelItem => item.Color)</td>
                 <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta mascota?');">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>
             </tr>
+
         }
         </tbody>
     </table>
