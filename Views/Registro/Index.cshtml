@@ -1,33 +1,38 @@
 @model Registro_de_mascotas.Models.Mascota
 
 <div class="container">
-    <form asp-controller="Registro" method="post">
+    <form asp-controller=@ViewData["Controlador"] method="post" asp-action=@ViewData["Action"]>
+        <input type="hidden" asp-for="Id" />
         <div class="form-group">
             <label asp-for="Name" class="control-label">Nombre</label>
             <input asp-for="Name" class="form-control" required>
         </div>
+        <br>
         <div class="form-group">
             <label asp-for="Raza" class="control-label">Raza</label>
             <input asp-for="Raza" class="form-control" required>
         </div>
+        <br>
         <div class="form-group">
             <label asp-for="Color" class="control-label">Color</label>
             <input asp-for="Color" class="form-control" required>
         </div>
+        <br>
         <div class="form-group">
             <label asp-for="FechaNacimiento" class="control-label">FechaNacimiento</label>
             <input asp-for="FechaNacimiento" class="form-control" required>
         </div>
-    <br>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Registrar</button>
-    </div>
+        <br>
+        <div class="mb-3">
+            @if (ViewData["Controlador"].Equals("Registro"))
+            {
+                <button type="submit" class="btn btn-primary mb-3">Registrar</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary mb-3">Actualizar</button>
+            }
+            <a asp-controller="Home" asp-action="Index" class="btn btn-warning mb-3">Volver</a>
+        </div>
     </form>
-    <h2>
-        @ViewData["Confirm"]
-    </h2>
-    <br>
-    <div>
-        <a asp-action="HomeController.Index">Bact to List</a>
-    </div>
 </div>

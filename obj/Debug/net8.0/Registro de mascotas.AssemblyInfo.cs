@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Registro de mascotas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f9a61a22ce9e630dc96723ec9a7fd6f77f9d4ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f216040fcceac524fd9d004215503da76bca366")]
 [assembly: System.Reflection.AssemblyProductAttribute("Registro de mascotas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Registro de mascotas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

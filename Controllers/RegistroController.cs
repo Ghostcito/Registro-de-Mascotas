@@ -25,6 +25,8 @@ namespace Registro_de_mascotas.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewData["Controlador"]="Registro";
+            ViewData["Action"]="Registrar";
             return View();
         }
 
